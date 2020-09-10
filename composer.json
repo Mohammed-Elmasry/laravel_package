@@ -1,0 +1,44 @@
+{
+    "name": "masry/lighthouse",
+    "description": "This is a package created as a trial to creating packages for laravel and php in general.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "mohammed-elmasry",
+            "email": "mohammed.mahmoud.mahmoud@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "orchestra/testbench": "5.x-dev",
+        "doctrine/dbal": "2.10.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Masry\\Lighthouse\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Masry\\Lighthouse\\tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Masry\\Lighthouse\\LighthouseServiceProvider"
+            ],
+            "aliases": {
+                "Calculator": "Masry\\Lighthouse\\Facades\\Calculator"
+            }
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "8.5.x-dev"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-f": "vendor/bin/phpunit --filter"
+    }
+}
